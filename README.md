@@ -2,7 +2,7 @@
 
 A FastAPI-based Retrieval-Augmented Generation (RAG) backend service for legal document queries using Google Gemini AI with clean citation extraction and structured responses.
 
-## 🚀 Features
+ Features
 
 - **Document Processing**: Supports PDF, DOCX, and TXT legal documents
 - **Smart Vector Search**: Uses cosine similarity for efficient document retrieval
@@ -12,7 +12,7 @@ A FastAPI-based Retrieval-Augmented Generation (RAG) backend service for legal d
 - **RESTful API**: Well-documented endpoints with proper error handling
 - **Real-time Processing**: Automatic document ingestion and embedding generation
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Backend**: FastAPI (Python 3.11)
 - **Embeddings**: Custom TF-IDF based embeddings (384-dimensional)
@@ -21,7 +21,7 @@ A FastAPI-based Retrieval-Augmented Generation (RAG) backend service for legal d
 - **Document Processing**: PyPDF2, python-docx, text file support
 - **Frontend**: HTML, Bootstrap, Vanilla JavaScript
 
-## 📋 API Endpoints
+## API Endpoints
 
 ### POST /query
 Query legal documents using natural language.
@@ -52,7 +52,7 @@ Check service health and initialization status.
 ### GET /documents/count
 Get the number of processed documents.
 
-## 🔧 Setup Instructions
+##  Setup Instructions
 
 ### 1. Environment Setup
 
@@ -91,7 +91,7 @@ uvicorn app:app --host 0.0.0.0 --port 5000 --reload
 - **API Documentation**: http://localhost:5000/docs
 - **Health Check**: http://localhost:5000/health
 
-## 📝 Example Usage
+## Example Usage
 
 ### Using the Web Interface
 
@@ -108,7 +108,7 @@ curl -X POST "http://localhost:5000/query" \
   -d '{"query": "What are the insurance liability rules for vehicles without permits?"}'
 ```
 
-## 🧪 Testing
+## Testing
 
 Run the test suite to validate functionality:
 
@@ -120,7 +120,7 @@ python test_app.py
 python test_api.py
 ```
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 legal-rag-backend/
@@ -142,7 +142,7 @@ legal-rag-backend/
 └── tests/               # Test files
 ```
 
-## 🚀 Features Implemented
+##  Features Implemented
 
 ✅ **Document Processing**: PDF, DOCX, TXT support with intelligent chunking  
 ✅ **Vector Search**: Cosine similarity-based document retrieval  
@@ -153,14 +153,14 @@ legal-rag-backend/
 ✅ **Caching**: Persistent document and embedding storage  
 ✅ **Health Monitoring**: Service status and document count tracking  
 
-## 🔍 Sample Legal Documents
+##  Sample Legal Documents
 
 The application includes sample legal documents covering:
 - Insurance liability cases
 - Vehicle permit regulations
 - Motor Vehicle Act provisions
 
-## 🛡️ Error Handling
+##  Error Handling
 
 The application includes comprehensive error handling for:
 - Invalid API keys
@@ -169,14 +169,14 @@ The application includes comprehensive error handling for:
 - AI service timeouts
 - Malformed requests
 
-## 📊 Performance
+## Performance
 
 - **Document Processing**: ~1000 words per chunk with 200-word overlap
 - **Embedding Generation**: Custom TF-IDF with 384 dimensions
 - **Search**: Top-5 similar documents retrieved
 - **Response Time**: Typically 2-5 seconds for complex queries
 
-## 🔄 Future Enhancements
+##  Future Enhancements
 
 - Support for additional document formats
 - Advanced sentence-transformers embeddings
@@ -184,11 +184,11 @@ The application includes comprehensive error handling for:
 - Database persistence for production deployment
 - User authentication and rate limiting
 
-## 📄 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
