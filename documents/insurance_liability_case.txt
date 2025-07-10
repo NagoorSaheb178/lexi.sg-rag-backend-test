@@ -1,0 +1,26 @@
+LEGAL CASE SUMMARY: INSURANCE LIABILITY WITHOUT VALID PERMIT
+
+Case Citation: Amrit Bhanu Vs NIC Multiplier (Supreme Court of India)
+
+FACTS:
+- A transport vehicle was involved in an accident
+- The vehicle was being operated without a valid permit at the time of accident
+- Insurance company was asked to pay compensation to victims
+- The issue was whether the insurance company is liable to pay compensation when the vehicle lacks a valid permit
+
+LEGAL PRINCIPLE:
+Use of a vehicle in a public place without a permit is a fundamental statutory infraction. The said situations cannot be equated with absence of licence or a fake licence or a licence for different kind of vehicle, or, for that matter, violation of a condition of carrying more number of passengers.
+
+SUPREME COURT RULING:
+The Supreme Court held that an insurance company is not liable to pay compensation if a transport vehicle involved in an accident was being used without a valid permit. This is because:
+
+1. Operating a vehicle without a permit is a fundamental breach of statutory requirements
+2. This violation is more serious than other infractions like driving without a license or with a fake license
+3. The use of a vehicle without a permit in a public place constitutes a fundamental statutory violation
+4. Such violations cannot be equated with lesser infractions like overloading or license-related issues
+
+JUDGMENT:
+Therefore, the tribunal as well as the High Court had directed that the insurer shall be entitled to recover the same from the owner and the driver. The insurance company is not obligated to pay compensation when the vehicle was operating without a valid permit.
+
+LEGAL PRECEDENT:
+This case establishes that insurance companies can deny compensation claims when transport vehicles are operated without valid permits, as this constitutes a fundamental statutory violation that goes beyond typical licensing issues.

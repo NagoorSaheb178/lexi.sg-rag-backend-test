@@ -1,0 +1,84 @@
+Backend Assignment – RAG + Citation
+
+Focus: Retrieval-Augmented Generation (RAG) Backend
+Stack: Python preferred (FastAPI / Flask)
+APIs: Only free/open-source tools
+
+Objective
+Build a backend service that accepts a natural language legal query and returns:
+A generated answer based on document retrieval
+
+
+A list of citations from the original documents (text + source)
+
+Input Documents
+You are required to work with real legal materials.
+Download sample PDFs and DOCX files here:
+ Lexi Legal Docs Repository
+Extract, chunk, and embed the documents for retrieval.
+
+ Required API
+Endpoint:
+POST /query
+Request Body:
+
+{
+  "query": "Is an insurance company liable to pay compensation if a transport vehicle involved in an accident was being used without a valid permit?"
+}
+
+Response Format:
+{
+  "answer": "No, an insurance company is not liable to pay compensation if a transport vehicle is used without a valid permit at the time of the accident. The Supreme Court held that use of a vehicle in a public place without a permit is a fundamental statutory infraction, and such a situation is not equivalent to cases involving absence of licence, fake licence, or breach of conditions such as overloading. Therefore, the insurer is entitled to recover the compensation amount from the owner and driver after paying the claim.",
+  "citations": [
+    {
+    "text": "Use of a vehicle in a public place without a permit is a fundamental statutory infraction. The said situations cannot be equated with absence of licence or a fake licence or a licence for different kind of vehicle, or, for that matter, violation of a condition of carrying more number of passengers.",
+    "source": "Doc_Name.docx"
+  },
+  {
+    "text": "Therefore, the tribunal as well as the High Court had directed that the insurer shall be entitled to recover the same from the owner and the driver.",
+    "source": "Doc_Name.docx"
+  }
+  ]
+}
+
+
+Requirements
+Use a free embedding model (e.g. sentence-transformers)
+
+
+Use FAISS, Chroma, or any local vector DB
+
+
+Use a local or open-source LLM, or free APIs
+
+
+Return the final answer along with retrieved source snippets as citations
+
+
+Maintain metadata (file name, chunk ID) in the vector store
+
+
+
+Submission
+Push your code to a public GitHub repository titled:
+lexi.sg-rag-backend-test
+[Bonus Points]: For hosting the solution
+
+Your submission must include:
+The working /query route
+
+
+Sample legal documents (or script to load them)
+
+
+A README.md with:
+
+
+Setup instructions
+
+
+How to test the API
+
+
+Example input/output
+

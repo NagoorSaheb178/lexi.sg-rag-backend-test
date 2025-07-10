@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal RAG Backend - Query Interface</title>
+    <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-gavel me-2"></i>
+                Legal RAG Backend
+            </a>
+            <div class="navbar-nav ms-auto">
+                <span class="navbar-text">
+                    <i class="fas fa-circle text-success me-1"></i>
+                    <span id="status">Ready</span>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-search me-2"></i>
+                            Query Legal Documents
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <form id="queryForm">
+                            <div class="mb-3">
+                                <label for="queryInput" class="form-label">Your Legal Query</label>
+                                <textarea class="form-control" id="queryInput" rows="4" 
+                                    placeholder="Enter your legal question here... (e.g., Is an insurance company liable to pay compensation if a transport vehicle involved in an accident was being used without a valid permit?)"
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <i class="fas fa-search me-2"></i>
+                                Submit Query
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div id="loadingSection" class="card mt-4" style="display: none;">
+                    <div class="card-body text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p class="mt-2 mb-0">Processing your query...</p>
+                    </div>
+                </div>
+
+                <div id="resultsSection" class="card mt-4" style="display: none;">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-file-alt me-2"></i>
+                            Query Results
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h6 class="fw-bold">Answer:</h6>
+                            <div id="answerContent" class="border-start border-primary border-3 ps-3"></div>
+                        </div>
+                        
+                        <div id="citationsSection">
+                            <h6 class="fw-bold">Citations:</h6>
+                            <div id="citationsContent"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="errorSection" class="alert alert-danger mt-4" style="display: none;">
+                    <i class="fas fa-exclamation-triangle me-2"></i>
+                    <strong>Error:</strong> <span id="errorMessage"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">
+                            <i class="fas fa-lightbulb me-2"></i>
+                            Example Queries
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted mb-4">Click on any example below to automatically fill the query field:</p>
+                        
+                        <div class="list-group">
+                            <button type="button" class="list-group-item list-group-item-action example-query" 
+                                    data-query="Is an insurance company liable to pay compensation if a transport vehicle involved in an accident was being used without a valid permit?">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Insurance Liability:</h6>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                                <p class="mb-1">Is an insurance company liable to pay compensation if a transport vehicle involved in an accident was being used without a valid permit?</p>
+                            </button>
+                            
+                            <button type="button" class="list-group-item list-group-item-action example-query" 
+                                    data-query="What are the essential elements required for a valid contract under Indian law?">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Contract Law:</h6>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                                <p class="mb-1">What are the essential elements required for a valid contract under Indian law?</p>
+                            </button>
+                            
+                            <button type="button" class="list-group-item list-group-item-action example-query" 
+                                    data-query="What is the distinction between operating without a permit and other license violations?">
+                                <div class="d-flex w-100 justify-content-between">
+                                    <h6 class="mb-1">Legal Distinctions:</h6>
+                                    <i class="fas fa-chevron-right"></i>
+                                </div>
+                                <p class="mb-1">What is the distinction between operating without a permit and other license violations?</p>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mt-5 py-4 bg-dark text-center">
+        <div class="container">
+            <p class="mb-0 text-muted">
+                Legal RAG Backend - Powered by FastAPI, FAISS, and Gemini AI
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+</body>
+</html>
