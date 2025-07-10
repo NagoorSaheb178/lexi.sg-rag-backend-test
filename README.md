@@ -196,6 +196,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 4. Push to the branch
 5. Create a Pull Request
 
-## 📞 Support
+##  Support
 
 For questions or issues, please open an issue on GitHub or contact the development team.
