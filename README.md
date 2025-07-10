@@ -144,14 +144,14 @@ legal-rag-backend/
 
 ##  Features Implemented
 
-✅ **Document Processing**: PDF, DOCX, TXT support with intelligent chunking  
-✅ **Vector Search**: Cosine similarity-based document retrieval  
-✅ **AI Integration**: Google Gemini 2.5 Flash for answer generation  
-✅ **Citation System**: Automatic source attribution  
-✅ **RESTful API**: Complete API with validation and error handling  
-✅ **Web Interface**: Clean, responsive Bootstrap UI  
-✅ **Caching**: Persistent document and embedding storage  
-✅ **Health Monitoring**: Service status and document count tracking  
+ **Document Processing**: PDF, DOCX, TXT support with intelligent chunking  
+ **Vector Search**: Cosine similarity-based document retrieval  
+ **AI Integration**: Google Gemini 2.5 Flash for answer generation  
+ **Citation System**: Automatic source attribution  
+ **RESTful API**: Complete API with validation and error handling  
+ **Web Interface**: Clean, responsive Bootstrap UI  
+ **Caching**: Persistent document and embedding storage  
+ **Health Monitoring**: Service status and document count tracking  
 
 ##  Sample Legal Documents
 
