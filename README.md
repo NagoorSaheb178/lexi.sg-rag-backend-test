@@ -2,7 +2,7 @@
 
 A FastAPI-based Retrieval-Augmented Generation (RAG) backend service for legal document queries using Google Gemini AI with clean citation extraction and structured responses.
 
- Features
+ # Features
 
 - **Document Processing**: Supports PDF, DOCX, and TXT legal documents
 - **Smart Vector Search**: Uses cosine similarity for efficient document retrieval
